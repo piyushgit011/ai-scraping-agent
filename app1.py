@@ -10,7 +10,7 @@ from datetime import datetime
 def scrape_data(url):
     load_dotenv()
     # Initialize the FirecrawlApp with your API key
-    app = FirecrawlApp(api_key='fc-bf9d5bca9c544265a742823ab5dc79fd')
+    app = FirecrawlApp(api_key='')
     
     # Scrape a single URL
     scraped_data = app.scrape_url(url,{'pageOptions':{'onlyMainContent': True}})
@@ -34,7 +34,7 @@ def save_raw_data(raw_data, timestamp, output_folder='output'):
 def format_data(data, fields=None):
     load_dotenv()
     # Instantiate the OpenAI client
-    client = OpenAI(api_key='sk-proj-TpUUpZ2AnLdsSHbNmuKHT3BlbkFJY2ZbqL7AUDZs2LHRXtwf')
+    client = OpenAI(api_key='')
 
     # Assign default fields if not provided
     if fields is None:
